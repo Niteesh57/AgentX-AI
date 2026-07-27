@@ -41,11 +41,11 @@ export const ShaderGradientBackground: React.FC = () => {
             url=""
             shader="defaults"
             type="waterPlane"
-            color1="#F57C00"
+            color1="#FF9800"
             color2="#EE8D24"
-            color3="#E65100"
+            color3="#FFB300"
             bgColor1="#FFFBF7"
-            bgColor2="#F57C00"
+            bgColor2="#FF9800"
             animate="on"
             uSpeed={0.25}
             uStrength={0.45}
