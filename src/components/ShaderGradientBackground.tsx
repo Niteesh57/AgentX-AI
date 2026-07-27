@@ -22,7 +22,7 @@ class ShaderErrorBoundary extends Component<
   render() {
     if (this.state.hasError) {
       return (
-        <div className="w-full h-full bg-gradient-to-br from-orange-600 via-amber-600 to-orange-800 opacity-60 blur-2xl animate-pulse" />
+        <div className="w-full h-full bg-gradient-to-br from-orange-500 via-amber-500 to-amber-600 opacity-60 blur-2xl animate-pulse" />
       );
     }
     return this.props.children;
@@ -41,11 +41,11 @@ export const ShaderGradientBackground: React.FC = () => {
             url=""
             shader="defaults"
             type="waterPlane"
-            color1="#EA580C"
+            color1="#F57C00"
             color2="#EE8D24"
-            color3="#D97706"
+            color3="#E65100"
             bgColor1="#FFFBF7"
-            bgColor2="#EA580C"
+            bgColor2="#F57C00"
             animate="on"
             uSpeed={0.25}
             uStrength={0.45}
