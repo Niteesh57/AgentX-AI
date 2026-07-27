@@ -31,39 +31,7 @@ class ShaderErrorBoundary extends Component<
 
 export const ShaderGradientBackground: React.FC = () => {
   return (
-    <ShaderErrorBoundary>
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-80">
-        <ShaderGradientCanvas
-          style={{ width: '100%', height: '100%', pointerEvents: 'none' }}
-        >
-          <ShaderGradient
-            control="props"
-            url=""
-            shader="defaults"
-            type="waterPlane"
-            color1="#FF9800"
-            color2="#EE8D24"
-            color3="#FFB300"
-            bgColor1="#FFFBF7"
-            bgColor2="#FF9800"
-            animate="on"
-            uSpeed={0.25}
-            uStrength={0.45}
-            uDensity={1.2}
-            cAzimuthAngle={180}
-            cPolarAngle={90}
-            cDistance={3.6}
-            cameraZoom={1}
-            wireframe={false}
-            grain="on"
-            lightType="3d"
-            rotationX={0}
-            rotationY={0}
-            rotationZ={0}
-          />
-        </ShaderGradientCanvas>
-      </div>
-    </ShaderErrorBoundary>
+    <div className="absolute inset-0 z-0 pointer-events-none bg-[#F97316]" />
   );
 };
 
