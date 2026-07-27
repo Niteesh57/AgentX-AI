@@ -42,7 +42,7 @@ export const ShaderGradientBackground: React.FC = () => {
             shader="defaults"
             type="waterPlane"
             color1="#EA580C"
-            color2="#F97316"
+            color2="#EE8D24"
             color3="#D97706"
             bgColor1="#FFFBF7"
             bgColor2="#EA580C"
