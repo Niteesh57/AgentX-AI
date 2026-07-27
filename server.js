@@ -1,6 +1,11 @@
 import express from 'express';
 import cors from 'cors';
 import googleTTS from 'google-tts-api';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -66,6 +71,14 @@ app.post('/api/tts', async (req, res) => {
 // Endpoint: GET /api/health
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', service: 'AgenixAI Universal Native Voice Server' });
+});
+
+// Serve static files from the React/Vite app
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// The "catchall" handler: for any request that doesn't match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 app.listen(PORT, () => {
